@@ -263,24 +263,25 @@ h3{
     }
 
     h2{
-        font-size: 25px;
+        font-size: 28px;
         text-align: center;
         line-height: 3rem;
 
     }
 
     h3{
-        font-size: 16px;
+        font-size: 25px;
     }
     .contenedor .header{
         padding-left: 20px;
     }
     .contenedor .menu a {
-        font-size: 16px;
+        font-size: 15px;
         text-align: left;
         text-orientation: upright;
         writing-mode: vertical-lr;
         padding: 2%;
+        padding-bottom: 15px;
     }
     .contenedor .sidebar {
         background: #91ca94;;
@@ -291,7 +292,7 @@ h3{
         min-height: 350px;
         grid-area: sidebar;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         grid-column: 1/5;
     }
 
