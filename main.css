@@ -1,3 +1,37 @@
+/*
+* Núria Masó Juvanteny
+* Novembre de 2021
+*/
+
+/*
+TAULA DE CONTINGUTS
+--------------------
+* 1 Estils generals
+* 2 Estil capçalera
+* 3 Estil navegador/menú
+* 4 Estil contingut principal
+* 5 Estil sidebar
+* 5.1 Icones
+* 6 Estil galeria
+* 7 Estil articles
+* 8 Estil contingut secundari
+* 9 Estil footer
+* 10 Media Querie
+* 10.1 Estils generals
+* 10.2 Estil capçalera
+* 10.3 Estil navegador/menú
+* 10.4 Estil contingut principal
+* 10.5 Estil sidebar
+* 10.6 Estil galeria
+* 10.7 Estil footer
+
+
+
+*/
+
+/*------------------------*/
+/*   1 Estil general      */
+/*------------------------*/
 * {
 	margin: 0;
 	padding: 0;
@@ -16,7 +50,6 @@ body {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(5, auto);
-
 	grid-template-areas: "header menu menu menu"
 						 "contenido contenido contenido sidebar"
 						 "widget-1 widget-2 widget-3 sidebar"
@@ -37,32 +70,6 @@ body {
 	padding: 20px;
 }
 
-.contenedor .header {
-	background: #afc1d7;
-	color: #000;
-	grid-area: header;
-    padding-left: 70px;
-    padding-top: 30px;
-}
-
-.contenedor .menu {
-    grid-area: menu;
-    background: #afc1d7 ;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    grid-auto-rows: minmax(20px, auto);
-}
-
-.contenedor .menu a {
-    text-decoration-line: none;
-    color: rgb(0, 0, 0);
-    padding: 1rem;
-    font-size: 25px;
-    text-align: center;
-
-    
-
-}
 h1{
     font-size: 48px;
     text-align: center;
@@ -78,51 +85,6 @@ h2{
 
 h3{
     font-size: 25px;
-}
-
-
-.contenedor .contenido {
-	grid-area: contenido;
-    font-size: 1.4rem;
-    line-height: 2.5rem;
-    text-align: justify;
-    font-weight: 200; 
-}
-
-.contenedor .sidebar {
-	grid-column: 3 / 5;
-	background: #91ca94;
-	text-align: center;
-	display: grid;
-	align-items: center;
-	justify-content: center;
-	min-height: 350px;
-	grid-area: sidebar;
-    grid-template-columns: 1fr;
-}
-
-.contenedor .fas,
-.contenedor .far{
-    font-size: 3rem;
-}
-
-.contenedor .títol{
-    grid-area: títol;
-    grid-column: 1/5;
-}
-
-.contenedor .galeria{
-    width:100%;
-    margin:auto;
-    display: grid;
-    grid-column: 1/5;
-    background: #fff;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(200px, auto);
-  gap: 20px;
-  grid-auto-flow: dense;
-  padding-bottom: 20px;
-  padding-top: 20px;
 }
 
 .imatge {
@@ -148,6 +110,109 @@ h3{
     max-width: 400px;
     height: auto;
 }
+
+.responsive1  {
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    align-items: center;
+}
+
+/*------------------------*/
+/*   2 Estil capçalera    */
+/*------------------------*/
+
+.contenedor .header {
+	background: #afc1d7;
+	color: #000;
+	grid-area: header;
+    padding-left: 70px;
+    padding-top: 30px;
+}
+
+/*------------------------*/
+/* 3 Estil navegador/menú */
+/*------------------------*/
+
+.contenedor .menu {
+    grid-area: menu;
+    background: #afc1d7 ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-auto-rows: minmax(20px, auto);
+}
+
+.contenedor .menu a {
+    text-decoration-line: none;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    font-size: 25px;
+    text-align: center;
+}
+
+/*-------------------------------*/
+/* 4 Estil contingut principal   */
+/*-------------------------------*/
+
+.contenedor .contenido {
+	grid-area: contenido;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    text-align: justify;
+    font-weight: 200; 
+}
+
+/*-------------------------------*/
+/* 5 Estil sidebar               */
+/*-------------------------------*/
+
+.contenedor .sidebar {
+	grid-column: 3 / 5;
+	background: #91ca94;
+	text-align: center;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	min-height: 350px;
+	grid-area: sidebar;
+    grid-template-columns: 1fr;
+}
+
+/*-------------------------------*/
+/* 5.1 Icones sidebar   */
+/*------------------------------*/
+
+.contenedor .fas,
+.contenedor .far{
+    font-size: 3rem;
+}
+
+/*-------------------------------*/
+/* 6 Estil galeria               */
+/*-------------------------------*/
+
+.contenedor .títol{
+    grid-area: títol;
+    grid-column: 1/5;
+}
+
+.contenedor .galeria{
+    width:100%;
+    margin:auto;
+    display: grid;
+    grid-column: 1/5;
+    background: #fff;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: 20px;
+  grid-auto-flow: dense;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+/*-------------------------------*/
+/* 7 Estil artícles              */
+/*-------------------------------*/
 
 .contenedor .widget-1,
 .contenedor .widget-2,
@@ -177,11 +242,20 @@ h3{
     line-height: 280%;
 }
 
+/*-------------------------------*/
+/* 8 Estil contingut secundari   */
+/*-------------------------------*/
+
 .contenedor .actuem{
     grid-area: actuem;
     grid-column: 1/5;
     text-align: justify;
 }
+
+/*-------------------------------*/
+/* 9 Estil footer                */
+/*-------------------------------*/
+
 .contenedor .footer {
 	background: #afc1d7;
 	color: #fff;
@@ -189,13 +263,6 @@ h3{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);	
-}
-
-.responsive1  {
-    width: 100%;
-    max-width: 1600px;
-    height: auto;
-    align-items: center;
 }
 
 .info{
@@ -217,104 +284,141 @@ h3{
     padding-top: 20px;
 }
 
+/*-------------------------------*/
+/* 10 Media Querie */
+/*-------------------------------*/
+
 @media screen and (max-width: 1000px){
-	.contenedor {
-		grid-template-areas: "header menu menu menu"
-						 "contenido contenido contenido contenido"
-						 "sidebar sidebar sidebar sidebar"
-						 "widget-1 widget-1 widget-1 widget-1"
-                         "widget-2 widget-2 widget-2 widget-2"
-                         "widget-3 widget-3 widget-3 widget-3"
-                         "títol títol títol títol"
-                         "galeria galeria galeria galeria"
-                         "actuem actuem actuem actuem"
-						 "footer footer footer footer";
-    }
-    
-    .contenedor{
-        width: 100%;
-    }
-    .contenedor .contenido{
+
+/*-------------------------------*/
+/* 10.1 Estil general            */
+/*-------------------------------*/
+.contenedor {
+    grid-template-areas: "header menu menu menu"
+                     "contenido contenido contenido contenido"
+                     "sidebar sidebar sidebar sidebar"
+                     "widget-1 widget-1 widget-1 widget-1"
+                     "widget-2 widget-2 widget-2 widget-2"
+                     "widget-3 widget-3 widget-3 widget-3"
+                     "títol títol títol títol"
+                     "galeria galeria galeria galeria"
+                     "actuem actuem actuem actuem"
+                     "footer footer footer footer";
+}
+   
+.contenedor{
+    width: 100%;
+}
+
+h1{
+    font-size: 34px;
+    text-align: center;
+    line-height: 3.2rem;
+    padding: 20px;
+}
+
+h2{
+    font-size: 28px;
+    text-align: center;
+    line-height: 3rem;
+
+}
+
+h3{
+    font-size: 25px;
+}
+
+/*-------------------------------*/
+/* 10.2 Estil capçalera          */
+/*-------------------------------*/
+
+.contenedor .header{
+    padding-left: 20px;
+}
+
+/*-------------------------------*/
+/* 10.3 Estil navagador/menú     */
+/*-------------------------------*/
+
+.contenedor .menu a {
+    font-size: 15px;
+    text-align: left;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    padding: 2%;
+    padding-bottom: 15px;
+}
+
+/*-------------------------------*/
+/* 10.4 Estil contingut principal*/
+/*-------------------------------*/
+
+.contenedor .contenido{
     grid-area: contenido;
     font-size: 1rem;
     line-height: 2.1rem;
     text-align: justify;     
-	}
+	}   
+/*-------------------------------*/
+/* 10.5 Estil sidebar            */
+/*-------------------------------*/    
 
-    .contenedor .galeria{
-        width:100%;
-        margin:auto;
-        display: grid;
-        grid-column: 1/5;
-        background: #fff;
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: minmax(200px, auto);
-      gap: 20px;
-      grid-auto-flow: dense;
-      padding-bottom: 20px;
-      padding-top: 20px;
-    }
-
-    h1{
-        font-size: 34px;
-        text-align: center;
-        line-height: 3.2rem;
-        padding: 20px;
-    }
-
-    h2{
-        font-size: 28px;
-        text-align: center;
-        line-height: 3rem;
-
-    }
-
-    h3{
-        font-size: 25px;
-    }
-    .contenedor .header{
-        padding-left: 20px;
-    }
-    .contenedor .menu a {
-        font-size: 15px;
-        text-align: left;
-        text-orientation: upright;
-        writing-mode: vertical-lr;
-        padding: 2%;
-        padding-bottom: 15px;
-    }
-    .contenedor .sidebar {
-        background: #91ca94;;
-        text-align: center;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        min-height: 350px;
-        grid-area: sidebar;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column: 1/5;
-    }
-
-    .contenedor .footer {
-        background: #afc1d7;
-        color: #fff;
-        grid-area: footer;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column: 1/5;	
-    }
-
-    .info{
-        display: grid;
-        align-items:center;
-        justify-content: center;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, 1fr);	
-        line-height: 40px;
-        height: auto;
-        padding: 5px;
-        grid-column: 1/3;
-    }
+.contenedor .sidebar {
+    background: #91ca94;;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+    grid-area: sidebar;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column: 1/5;
 }
+   
+/*-------------------------------*/
+/* 10.6 Estil galeria            */
+/*-------------------------------*/
+
+.contenedor .galeria{
+    width:100%;
+    margin:auto;
+    display: grid;
+    grid-column: 1/5;
+    background: #fff;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: 20px;
+  grid-auto-flow: dense;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+/*-------------------------------*/
+/* 10.7 Estil footer            */
+/*-------------------------------*/
+
+.contenedor .footer {
+    background: #afc1d7;
+    color: #fff;
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column: 1/5;	
+}
+
+.info{
+    display: grid;
+    align-items:center;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);	
+    line-height: 40px;
+    height: auto;
+    padding: 5px;
+    grid-column: 1/3;
+}
+}
+
+    
